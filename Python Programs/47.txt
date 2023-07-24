@@ -1,0 +1,143 @@
+Python 3.11.1 (v3.11.1:a7a450f84a, Dec  6 2022, 15:24:06) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+d = {"id":4654,'name':'surya',101:102}
+type(d)
+<class 'dict'>
+len(d)
+3
+d1 = d.copy()
+d1
+{'id': 4654, 'name': 'surya', 101: 102}
+d1.clear()
+d1
+{}
+d
+{'id': 4654, 'name': 'surya', 101: 102}
+d.items()
+dict_items([('id', 4654), ('name', 'surya'), (101, 102)])
+d.keys()
+dict_keys(['id', 'name', 101])
+type
+<class 'type'>
+type(d.keys())
+<class 'dict_keys'>
+d.values()
+dict_values([4654, 'surya', 102])
+d.get(101)
+102
+d.get(id)
+d.get('id')
+4654
+d.get('location')
+d.["id"]
+SyntaxError: invalid syntax
+d['id]
+  
+SyntaxError: incomplete input
+d.['id']
+  
+SyntaxError: invalid syntax
+d['id']
+  
+4654
+d["location"]
+  
+Traceback (most recent call last):
+  File "<pyshell#21>", line 1, in <module>
+    d["location"]
+KeyError: 'location'
+d1 = d.copy()
+  
+d1
+  
+{'id': 4654, 'name': 'surya', 101: 102}
+d
+  
+{'id': 4654, 'name': 'surya', 101: 102}
+d1
+  
+{'id': 4654, 'name': 'surya', 101: 102}
+d.popitem()
+  
+(101, 102)
+d
+  
+{'id': 4654, 'name': 'surya'}
+d1.pop(101)
+  
+102
+d1
+  
+{'id': 4654, 'name': 'surya'}
+d1.pop("location")
+  
+Traceback (most recent call last):
+  File "<pyshell#30>", line 1, in <module>
+    d1.pop("location")
+KeyError: 'location'
+d
+  
+{'id': 4654, 'name': 'surya'}
+d1
+  
+{'id': 4654, 'name': 'surya'}
+d.setdefault('id')
+  
+4654
+d.setdefault('location')
+  
+d
+  
+{'id': 4654, 'name': 'surya', 'location': None}
+d.get('location')='vja'
+  
+SyntaxError: cannot assign to function call here. Maybe you meant '==' instead of '='?
+d('location')='vja'
+  
+SyntaxError: cannot assign to function call here. Maybe you meant '==' instead of '='?
+d['location']='vja'
+  
+d
+  
+{'id': 4654, 'name': 'surya', 'location': 'vja'}
+type(d['name'])
+  
+<class 'str'>
+d.setdefault('gender')
+  
+d['gender']='male'
+  
+d
+  
+{'id': 4654, 'name': 'surya', 'location': 'vja', 'gender': 'male'}
+type(d.get['gender'])
+  
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    type(d.get['gender'])
+TypeError: 'builtin_function_or_method' object is not subscriptable
+type(d.get('gender'))
+  
+<class 'str'>
+d.update({'cgpa':2)
+         
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+d.update({'cgpa':2})
+         
+d
+         
+{'id': 4654, 'name': 'surya', 'location': 'vja', 'gender': 'male', 'cgpa': 2}
+>>> d.update({'name':"klu",'maritalStatus':True})
+...          
+>>> d
+...          
+{'id': 4654, 'name': 'klu', 'location': 'vja', 'gender': 'male', 'cgpa': 2, 'maritalStatus': True}
+>>> len(d)
+...          
+6
+>>> d.keys()
+...          
+dict_keys(['id', 'name', 'location', 'gender', 'cgpa', 'maritalStatus'])
+>>> d.setdefault('cgpa')
+...          
+2

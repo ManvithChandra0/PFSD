@@ -1,0 +1,168 @@
+Python 3.11.1 (v3.11.1:a7a450f84a, Dec  6 2022, 15:24:06) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license()" for more information.
+l = [1,2,3,3,4,5,7]
+l
+[1, 2, 3, 3, 4, 5, 7]
+type(l)
+<class 'list'>
+len(l)
+7
+sum(l)
+25
+min(l)
+1
+max(l)
+7
+l.append(34)
+l
+[1, 2, 3, 3, 4, 5, 7, 34]
+l.append([20,30])
+l
+[1, 2, 3, 3, 4, 5, 7, 34, [20, 30]]
+l1=l.copy()
+l1
+[1, 2, 3, 3, 4, 5, 7, 34, [20, 30]]
+l2 = []
+l2
+[]
+l3 = [10,20,33,20,5,1,20,10,50]
+l3
+[10, 20, 33, 20, 5, 1, 20, 10, 50]
+len(l3)
+9
+l3.count(10)
+2
+l3.count(20)
+3
+l3.extend(44)
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    l3.extend(44)
+TypeError: 'int' object is not iterable
+l4 = [1,2,3]
+l3.extend(l4)
+l3
+[10, 20, 33, 20, 5, 1, 20, 10, 50, 1, 2, 3]
+len(l3)
+12
+l3.index(20)
+1
+l3.index(33)
+2
+l3.index(1)
+5
+l3
+[10, 20, 33, 20, 5, 1, 20, 10, 50, 1, 2, 3]
+l3.insert(2,34)
+l3
+[10, 20, 34, 33, 20, 5, 1, 20, 10, 50, 1, 2, 3]
+len(l3)
+13
+l3.pop()
+3
+l3.remove(20)
+l3
+[10, 34, 33, 20, 5, 1, 20, 10, 50, 1, 2]
+l3.remove(66)
+Traceback (most recent call last):
+  File "<pyshell#35>", line 1, in <module>
+    l3.remove(66)
+ValueError: list.remove(x): x not in list
+l3.count(66)
+0
+l3.index(66)
+Traceback (most recent call last):
+  File "<pyshell#37>", line 1, in <module>
+    l3.index(66)
+ValueError: 66 is not in list
+l3.reverse()
+l3
+[2, 1, 50, 10, 20, 1, 5, 20, 33, 34, 10]
+l4.clear()
+l4
+[]
+l3
+[2, 1, 50, 10, 20, 1, 5, 20, 33, 34, 10]
+l3.sort()
+l3
+[1, 1, 2, 5, 10, 10, 20, 20, 33, 34, 50]
+l3.sort(reverse=False)
+l3
+[1, 1, 2, 5, 10, 10, 20, 20, 33, 34, 50]
+l3.sort(reverse=True)
+l3
+[50, 34, 33, 20, 20, 10, 10, 5, 2, 1, 1]
+l4 = [3,4,1,-1]
+sorted(l4)
+[-1, 1, 3, 4]
+sorted(l4,reverse=False)
+[-1, 1, 3, 4]
+sorted(l4,reverse=True)
+[4, 3, 1, -1]
+l5 = [10,2,3,10,1,5,4,3]
+len(l5)
+8
+l5
+[10, 2, 3, 10, 1, 5, 4, 3]
+l5[3]
+10
+l5[-4]
+1
+l5[8]
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    l5[8]
+IndexError: list index out of range
+l5[-7]
+2
+l5[-6]
+3
+l5
+[10, 2, 3, 10, 1, 5, 4, 3]
+l5[-7]=11
+l5
+[10, 11, 3, 10, 1, 5, 4, 3]
+l5[3]=30
+l5
+[10, 11, 3, 30, 1, 5, 4, 3]
+l5[1:5:1]
+[11, 3, 30, 1]
+l5[2:6:2]
+[3, 1]
+l5[2:5:-1]
+[]
+l5[-1:-6:2]
+[]
+l5[-1:-6:-2]
+[3, 5, 30]
+l5[-1:-5:1]
+[]
+l5
+[10, 11, 3, 30, 1, 5, 4, 3]
+l5[1:5:1] = [1,2,3]
+l5
+[10, 1, 2, 3, 5, 4, 3]
+l5[-1:-6:-2]=[11,22,33]
+l5
+[10, 1, 33, 3, 22, 4, 11]
+l5[3:7:2]
+[3, 4]
+l5[3:7:2] = [123,125,127]
+Traceback (most recent call last):
+  File "<pyshell#78>", line 1, in <module>
+    l5[3:7:2] = [123,125,127]
+ValueError: attempt to assign sequence of size 3 to extended slice of size 2
+>>> names = ["surya","kiran","cse"]
+>>> type(names)
+<class 'list'>
+>>> len(names)
+3
+>>> min(names)
+'cse'
+>>> max(names)
+'surya'
+>>> demo = [1,2,"klu",5,5,6,"cse"]
+>>> l5[5]
+4
+>>> type(l5[5])
+<class 'int'>

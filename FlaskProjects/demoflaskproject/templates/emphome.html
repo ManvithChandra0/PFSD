@@ -1,0 +1,28 @@
+<center>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>UPI QR Code Payment </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+      </head>
+      <body>
+        <h1>UPI QR Code Payment</h1>
+        <div id="qrcode"></div>
+        <script>
+          var qrCode = new QRCode(document.getElementById("qrcode"), {
+            text: "upi://pay?pa=9618151591@ybl&pn=PAYEE_NAME&am=10.00&cu=INR",
+            width: 256,
+            height: 256,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+          });
+        </script>
+        <center>
+            <button ><a href="/payment">Payment</a></button> <br>
+          </center>
+          
+      </body>
+    </html>
+  </center>
+  

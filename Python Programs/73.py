@@ -1,0 +1,24 @@
+#program to demonstrate super() method
+
+class A:
+    id=101
+    def display1(self):
+        print("I am in Class A display method")
+        print(self.id)
+
+class B(A):
+    name="KLU"
+    def display2(self):
+        print("I am in Class B display method")
+        print(self.name)
+
+        print("***super method demo****")
+        print(super().id) #accessing parent class properties
+        super().display1() #accessing parent class methods
+
+a=A()
+print(a.id)
+a.display1()
+b = B() #b is an object of Class B
+b.display2()
+

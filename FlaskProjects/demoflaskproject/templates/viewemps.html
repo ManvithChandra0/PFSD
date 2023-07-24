@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+   <title>
+        {% block title %}
+        View All Employees
+        {% endblock %}
+    </title>
+
+</head>
+<body>
+
+{%block body%}
+
+<h2 align="center"><u>View Registered Users</u></h2>
+
+Total Registered Users = {{count}}  <br>
+
+<table align="center" border="2">
+    <tr style="font-weight:bold">
+        <td>ID</td>
+        <td>Name</td>
+        <td>Gender</td>
+        <td>Date of Birth</td>
+        <td>Department</td>
+        <td>Email ID</td>
+        <td>Contact No</td>
+        <td>Action</td>
+    </tr>
+
+    {% for emp in emplist %}
+    <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.dob}}</td>
+        <td>{{emp.dept}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.contactno}}</td>
+        <td>
+
+            <a href="/deleteemp/{{emp.id}}">Delete</a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
+
+</body>
+</html>

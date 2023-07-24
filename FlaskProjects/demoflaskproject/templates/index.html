@@ -1,0 +1,105 @@
+<html>
+<head>
+
+<link rel="stylesheet" type='text/css' href="{{url_for('static',filename='css/style.css')}}">
+
+     <title>
+        {% block title %}
+        Main
+        {% endblock %}
+    </title>
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<h1 align=center>PFSD Flask Web Application</h1>
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('formdemo')}}">Form Demo</a></li>
+                <li><a href="{{url_for('empreg')}}">Employee Registration</a></li>
+                <li><a href="{{url_for('emplogin')}}">Employee Login</a></li>
+                <li><a href="{{url_for('viewemps')}}">View All Employees</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br>
+
+{%block body%}
+
+<div class="alignRow">
+<div class="imageColumn">
+  <img src="{{url_for('static',filename='images/frontend.png')}}" alt="img1" style="width:100%">
+</div>
+<div class="imageColumn">
+
+  <img src="{{url_for('static',filename='images/flask.png')}}" alt="img2" style="width:100%">
+</div>
+<div class="imageColumn">
+  <img src="{{url_for('static',filename='images/mysql.png')}}" alt="img3" style="width:100%">
+</div>
+<div class="imageColumn">
+
+<img src="{{url_for('static',filename='images/sqlalchemy.png')}}" alt="img4" style="width:100%">
+
+</div>
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+<head>
+
+<link rel="stylesheet" type='text/css' href="{{url_for('static',filename='css/style.css')}}">
+
+     <title>
+Change Password
+    </title>
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<h1 align=center>PFSD Flask Web Application</h1>
+
+<br>
+
+ <header>
+        <nav class="navbar">
+             <ul>
+                <li><a href="{{url_for('emphome')}}">Home</a></li>
+                <li><a href="{{url_for('empchangepwd')}}">Change Password</a></li>
+                <li><a href="{{url_for('emplogout')}}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br>
+
+<h3 align="center"><mark>{{msg}}</mark></h3>
+
+<form method="post" action="{{url_for('updatepwd')}}">
+
+<table align=center>
+
+<tr>
+<td><label>Old Password</label></td>
+<td><input type="password" name="opwd" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+    <tr>
+<td><label>New Password</label></td>
+<td><input type="password" name="npwd" required="required"/></td>
+</tr>
+
+
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Change" class="button"></td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
